@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Certificates | Jayendra Pandey</title>
+  <meta name="description" content="All certificates of Jayendra Pandey in one place." />
+  <style>
+    :root {
+      --bg:#0b0f14; --card:#111827; --soft:#1f2937;
+      --text:#e5e7eb; --muted:#94a3b8; --accent:#22c55e;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Inter,Arial,sans-serif;background:linear-gradient(180deg,#0b0f14,#0b0f14 60%,#0f172a);color:var(--text)}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin-bottom:16px}
+    .title{font-size:clamp(24px,3vw,36px);font-weight:800;letter-spacing:.2px}
+    .subtitle{color:var(--muted);margin-top:4px}
+    .card{background:linear-gradient(180deg,var(--card),#0e1623);border:1px solid #1f2a3a;border-radius:18px;padding:18px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+    a.cardlink{text-decoration:none;color:inherit;display:flex;gap:12px;align-items:center;border:1px solid #223047;background:linear-gradient(180deg,#0e1623,#0b1220);transition:.2s;border-radius:16px;padding:14px}
+    a.cardlink:hover{transform:translateY(-2px);border-color:#2e4264}
+    .favicon{width:28px;height:28px;border-radius:8px;background:#0b1220;border:1px solid #1c2740;display:grid;place-items:center}
+    .tag{font-size:12px;color:#a5b4fc;border:1px solid #27346a;padding:2px 8px;border-radius:999px}
+    .row{display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .muted{color:var(--muted);font-size:14px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid #22403a;background:linear-gradient(180deg,#0e1d19,#0b1715);color:#bbf7d0;text-decoration:none}
+    .btn:hover{border-color:#2f6d5d}
+    details{background:#0c1320;border:1px solid #1a2842;border-radius:16px;padding:14px}
+    summary{cursor:pointer;font-weight:700}
+    iframe{width:100%;min-height:520px;border:1px solid #1a2842;border-radius:16px;background:#0b0f14}
+    footer{margin-top:28px;color:var(--muted);font-size:13px}
+    code{background:#0f172a;color:#e2e8f0;padding:2px 6px;border-radius:6px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <div class="title">All Certificates — <span style="color:var(--accent)">Jayendra Pandey</span></div>
+        <div class="subtitle">Single link to view/download my certificates. Updated: <span id="today"></span></div>
+      </div>
+      <a class="btn" id="downloadPdf" href="#">⬇️ Download as PDF (coming soon)</a>
+    </header>
+
+    <!-- Individual Certificate Links -->
+    <div class="card" style="margin-top:16px">
+      <div class="row"><div style="font-weight:700">Individual Certificate Links</div><span class="tag">PDFs</span></div>
+      <div class="grid" style="margin-top:12px">
+
+        <!-- Certificate 1 -->
+        <a class="cardlink" href="https://raw.githubusercontent.com/git-Jayendra/Jayendra-certificates/main/certificate1.pdf.pdf" target="_blank" rel="noopener">
+          <div class="favicon">📄</div>
+          <div>
+            <div style="font-weight:700">Certificate 1</div>
+            <div class="muted">PDF file — opens in new tab</div>
+          </div>
+        </a>
+
+        <!-- Certificate 2 -->
+        <a class="cardlink" href="https://raw.githubusercontent.com/git-Jayendra/Jayendra-certificates/main/certificate2.pdf.pdf" target="_blank" rel="noopener">
+          <div class="favicon">📄</div>
+          <div>
+            <div style="font-weight:700">Certificate 2</div>
+            <div class="muted">PDF file — opens in new tab</div>
+          </div>
+        </a>
+
+        <!-- Certificate 3 -->
+        <a class="cardlink" href="https://raw.githubusercontent.com/git-Jayendra/Jayendra-certificates/main/certificate3.pdf.pdf" target="_blank" rel="noopener">
+          <div class="favicon">📄</div>
+          <div>
+            <div style="font-weight:700">Certificate 3</div>
+            <div class="muted">PDF file — opens in new tab</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- <footer>
+      // Tip: Add this page link in your CV and also convert it to a QR code.</p>
+    </footer> -->
+  </div>
+
+  <script>
+    // show today's date
+    const d=new Date();
+    document.getElementById('today').textContent=d.toLocaleDateString();
+
+    // disable fake PDF button
+    document.getElementById('downloadPdf').addEventListener('click', e=>{
+      e.preventDefault();
+      alert('Export to PDF: Press Ctrl/Cmd+P → Save as PDF.');
+    });
+  </script>
+</body>
+</html>
